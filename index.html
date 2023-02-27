@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Interpals</title>
+  <!--css-->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--font-->
+  <script src="https://kit.fontawesome.com/2128f71277.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light body">
+  <!-- 導覽列  -->
+  <nav class="navbar navbar-expand fixed-top justify-content-between">
+    <a class="navbar-brand" href="./index.html">
+      <img class="logo" src="logo.png" alt="logo" width="90%">
+    </a>
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="fa-solid fa-magnifying-glass social-button" title="Search" href="./search.html"></a>
+      </li>
+      <li class="nav-item">
+        <a class="fa-solid fa-heart social-button" title="Favorite" href="./favorite.html"></a>
+      </li>
+      <li class="nav-item">
+        <a class="fa-regular fa-envelope social-button" title="Message" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="fa-regular fa-user social-button" title="Profile" href="#"></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- header  -->
+  <header>
+    <img src="cover.png" alt="cover" id="cover" class="img-fluid">
+  </header>
+
+  <!--  search form  -->
+  <div class="search-form mt-3 d-flex justify-content-center">
+    <div class="container search-container">
+      <div class="search-box d-flex flex-md-row flex-column ">
+        <h5 class="m-2">Quick Search</h5>
+        <div class="col-md-4 col-8 d-flex flex-row m-2">
+          <label>Age：</label>
+          <input type="number" class="form-control age" value="20" min="13" max="125" id="search-min-age">
+          <label class="mx-3">to</label>
+          <input type="number" class="form-control age" value="28" min="13" max="125" id="search-max-age">
+        </div>
+
+        <div class="d-flex flex-row m-2">
+          <label>Gender：</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="search-male">
+            <label class="form-check-label me-2" for="search-male">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="search-female">
+            <label class="form-check-label me-2" for="search-female">
+              Female
+            </label>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary col-12" id="search-submit-button">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="quick-search-container d-flex flex-wrap justify-content-start">
+        <!--   render 4 result here   -->
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 使用者名單  -->
+  <div class="container mt-3">
+    <h2>Here are some of our users!</h2>
+    <div class="row justify-content-center" id="card-container">
+      <!-- display card here -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" role="dialog" id="user-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </button>
+        </div>
+        <div class="modal-body d-flex align-items-center">
+          <div>
+            <img class="modal-avatar " src="" alt="modal-avatar" style="width: 14rem">
+          </div>
+          <div class="modal-user-info "></div>
+        </div>
+        <div class='modal-footer'>
+          <button type="button" class="btn btn-secondary btn-add-favorite" title="add to favorite"><i
+              class="fa-solid fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
